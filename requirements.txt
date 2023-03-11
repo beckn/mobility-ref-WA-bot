@@ -1,0 +1,11 @@
+fastapi==0.94.0
+geopy==2.3.0
+googlemaps==4.7.3
+pydantic==1.9.0
+pymongo==4.3.3
+python_dateutil==2.8.2
+pytz==2022.1
+PyYAML==6.0
+requests==2.27.1
+shortuuid==1.0.11
+uvicorn==0.17.6

@@ -1,0 +1,106 @@
+{
+    "begin": {
+        "driver_message": "driver_bigin_message",
+        "rider_message": "rider_bigin_message",
+        "anotations": {
+            "1": "searching rides",
+            "2": "search broadcast"
+        }
+    },
+    "lang": {
+        "driver_message": "driver_pickup_message",
+        "rider_message": "rider_pickup_message",
+        "anotations": {
+            "1": "searching rides",
+            "2": "search broadcast"
+        }
+    },
+    "pickup": {
+        "driver_message": "driver_pickup_message",
+        "rider_message": "rider_pickup_message",
+        "anotations": {
+            "1": "searching rides",
+            "2": "search broadcast"
+        }
+    },
+    "drop": {
+        "driver_message": "driver_pickup_message",
+        "rider_message": "rider_pickup_message",
+        "anotations": {
+            "1": "searching rides",
+            "2": "search broadcast"
+        }
+    },
+    "otp":{
+        "driver_message": "driver_pickup_message",
+        "rider_message": "rider_pickup_message",
+        "anotations": {
+            "1": "searching rides",
+            "2": "search broadcast"
+        }
+    },
+    "search": {
+        "driver_message": "driver_pickup_message",
+        "rider_message": "rider_pickup_message",
+        "anotations": {
+            "1": "searching rides",
+            "2": "search broadcast"
+        }
+    },
+    "catalogue":{
+        "driver_message": "driver_pickup_message",
+        "rider_message": "rider_pickup_message",
+        "anotations": {
+            "1": "searching rides",
+            "2": "search broadcast"
+        }
+    },
+    "select": {
+        "driver_message": "driver_pickup_message",
+        "rider_message": "rider_pickup_message",
+        "anotations": {
+            "1": "searching rides",
+            "2": "search broadcast"
+        }
+    },
+    "quote":{
+        "driver_message": "driver_pickup_message",
+        "rider_message": "rider_pickup_message",
+        "anotations": {
+            "1": "searching rides",
+            "2": "search broadcast"
+        }
+    },
+    "init": {
+        "driver_message": "driver_pickup_message",
+        "rider_message": "rider_pickup_message",
+        "anotations": {
+            "1": "searching rides",
+            "2": "search broadcast"
+        }
+    },
+    "confirm": {
+        "driver_message": "driver_pickup_message",
+        "rider_message": "rider_pickup_message",
+        "anotations": {
+            "1": "searching rides",
+            "2": "search broadcast"
+        }
+    },
+    "status": {
+        "driver_message": "driver_pickup_message",
+        "rider_message": "rider_pickup_message",
+        "anotations": {
+            "1": "searching rides",
+            "2": "search broadcast"
+        }
+    },
+    "cancel": {
+        "driver_message": "driver_pickup_message",
+        "rider_message": "rider_pickup_message",
+        "anotations": {
+            "1": "searching rides",
+            "2": "search broadcast"
+        }
+    }
+}

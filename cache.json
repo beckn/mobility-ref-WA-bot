@@ -1,0 +1,82 @@
+{
+    "transaction_id": "586603e2-5a35-4138-8756-ea437abe41b2",
+    "bpp": {
+        "becknify.humbhionline.in.mobility.BPP/beckn_open/app1-succinct-in | LiY": {
+            "bpp_id": "becknify.humbhionline.in.mobility.BPP/beckn_open/app1-succinct-in",
+            "bpp_name": "taxi.becknprotocol.io",
+            "bpp_code": "taxi.becknprotocol.io",
+            "bpp_uri": "https://becknify.humbhionline.in/mobility/beckn_open/app1-succinct-in/bpp"
+        }
+    },
+    "providers": {
+        "./mobility/ind.blr/7@taxi.becknprotocol.io.provider | LiY": {
+            "id": "./mobility/ind.blr/7@taxi.becknprotocol.io.provider",
+            "bpp_id": "becknify.humbhionline.in.mobility.BPP/beckn_open/app1-succinct-in",
+            "name": "Best Taxies",
+            "images": [
+                "https://taxi.becknprotocol.io/companies/view/7"
+            ],
+            "location_id": "./mobility/ind.blr/9@taxi.becknprotocol.io.provider_location",
+            "gps": "12.967304,77.714640"
+        }
+    },
+    "categories": {
+        "./mobility/ind.blr/1@taxi.becknprotocol.io.category | LiY": {
+            "name": "Premium Taxi"
+        }
+    },
+    "items": {
+        "0 | LiY": {
+            "name": "Premium Taxi",
+            "_id": "0 | LiY",
+            "id": "./mobility/ind.blr/9@taxi.becknprotocol.io.item",
+            "provider_id": "./mobility/ind.blr/7@taxi.becknprotocol.io.provider",
+            "fulfillment_id": "./mobility/ind.blr/5563@taxi.becknprotocol.io.fulfillment",
+            "code": "Premium Taxi",
+            "images": [
+                "https://taxi.becknprotocol.io/resources/images/car.png"
+            ],
+            "price": "26.29510149095305",
+            "currency": "INR",
+            "category_id": "./mobility/ind.blr/1@taxi.becknprotocol.io.category",
+            "tags": {
+                "NameOfModel": "Nexon",
+                "Make": "TATA",
+                "FuelType": "Petrol",
+                "VehicleType": "Premium Taxi"
+            }
+        }
+    },
+    "user_cart": {
+        "_id": "0 | LiY",
+        "items": [
+            "./mobility/ind.blr/9@taxi.becknprotocol.io.item"
+        ]
+    },
+    "quotes": {
+        "becknify.humbhionline.in.mobility.BPP/beckn_open/app1-succinct-in | LiY": {
+            "provider_id": "./mobility/ind.blr/7@taxi.becknprotocol.io.provider",
+            "price": "26.29510149095305",
+            "break_up": [
+                {
+                    "title": "Fare",
+                    "price": "22.283984314366993"
+                },
+                {
+                    "title": "Tax",
+                    "price": "4.011117176586058"
+                }
+            ]
+        }
+    },
+    "orders": {
+        "bpp_id": "becknify.humbhionline.in.mobility.BPP/beckn_open/app1-succinct-in",
+        "bpp_uri": "https://becknify.humbhionline.in/mobility/beckn_open/app1-succinct-in/bpp",
+        "id": "./mobility/ind.blr/5563@taxi.becknprotocol.io.order",
+        "state": "Awaiting Driver acceptance",
+        "agent_name": "Nikhil Sharma",
+        "vehicle_number": "MH09 4567",
+        "ref_id": "ref_5edFB",
+        "parent_order_id": "063865861"
+    }
+}

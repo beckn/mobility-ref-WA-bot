@@ -1,0 +1,57 @@
+beckn:
+  base_url: "https://api-staging.mobilityreferencebap.becknprotocol.io"
+  search:
+    path: "/client/v1/search"
+    cb_path: "/client/v1/on_search"
+    wait_time: 10
+  select:
+    path: "/client/v2/get_quote"
+    cb_path: "/client/v2/on_get_quote"
+    wait_time: 5
+  init:
+    path: "/client/v2/initialize_order"
+    cb_path: "/client/v2/on_initialize_order"
+    wait_time: 10
+  confirm:
+    path: "/client/v2/confirm_order"
+    cb_path: "/client/v2/on_confirm_order"
+    wait_time: 10
+  status:
+    path: "/client/v2/order_status"
+    cb_path: "/client/v2/on_order_status"
+    wait_time: 10
+  track:
+    path: "/client/v2/track"
+    cb_path: "/client/v2/on_track"
+    wait_time: 10
+  cancel:
+    path: "/client/v1/cancel_order"
+    cb_path: "/client/v1/on_cancel_order"
+    wait_time: 10
+  support:
+    path: '/client/v2/get_support'
+    cb_path: '/client/v2/on_support'
+    wait_time: 10
+
+events:
+  base_url: 'https://api.eventcollector.becknprotocol.io/v2'
+  path: '/event'
+
+subscribers:
+  gateway.becknprotocol.io: 'gateway.becknprotocol.io'
+  mobilityreferencebap.becknprotocol.io: 'mobilityreferencebap.becknprotocol.io'
+  becknify.humbhionline.in.mobility.BPP/beckn_open/app1-succinct-in: 'becknify.humbhionline.in.mobility.BPP/beckn_open/app1-succinct-in'
+  mobilityreferencebap-staging.becknprotocol.io: 'mobilityreferencebap-staging.becknprotocol.io'
+  api.sandbox.beckn.juspay.in/bpp/cab/v1/3041599b-2fcf-45e1-bfd5-115db5cd1353: 'becknify.humbhionline.in/mobility/beckn_open/taxi-staging/bpp'
+
+session_url: "https://api.eventcollector.becknprotocol.io/v2/event/experience"
+
+track_msg: 'Track your ride here\n{track_link}'
+
+ride_status:
+  reaching pickup location: '*Ride Status:*\nHurray ! Your ride is accepted by the driver.'
+  reached pickup location: '*Ride Status:*\nHurray ! Your ride is accepted by the driver.'
+  started: '*Ride Status:*\nYour ride is started. Please sit back and relax.'
+  ended: '*Ride Status:*\nYou have reached your destination.\nThank you for taking the ride with Travel Buddy.\nHave a great day!'
+  canceled: '*Ride Status:*\nSorry, your ride has been cancelled by the driver.\nThanks for using ride service'
+  awaiting driver acceptance: '*Ride Status:*\nSorry, your ride is not accepeted by the driver.\nThanks for using ride service'

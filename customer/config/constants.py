@@ -1,0 +1,9 @@
+
+HOME_DIR = "HOME_DIR"
+TEMPLATE = "TEMPLATE"
+IMAGE    = "IMAGE"
+TEXT     = "TEXT"
+BUTTON   = "BUTTON"
+LIST     = "LIST"
+HINDI    = "hi"
+ENGLISH  = "en"

@@ -1,0 +1,12 @@
+# Host/Port for MongoDB  
+mongodb:
+  host: ''
+  port: ''
+  user: ''
+  password: ''
+
+
+
+# Key for using google maps api
+maps:
+  apikey: ''

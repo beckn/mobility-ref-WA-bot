@@ -1,0 +1,429 @@
+{
+    "beckn_origin": {
+        "message": "ONDC_TXT_START",
+        "reply": "TEXT",
+        "next_state": "1_ondc",
+        "store_to_db": true,
+        "store_to_dict": true,
+        "intent": "customer_name"
+    },
+    "0_ondc": {
+        "message": "ONDC_TXT_0",
+        "reply": "TEXT",
+        "next_state": "5a_ondc"
+    },
+    "1_ondc": {
+        "message": "ONDC_TXT_1",
+        "reply": "BUTTON",
+        "buttons": "ONDC_TXT_1_BTNS",
+        "2_option_state": "2_ondc",
+        "1_option_state": "12_ondc",
+        "store_to_dict": true,
+        "intent": "language"
+    },
+    "2_ondc": {
+        "message": "ONDC_TXT_2",
+        "reply": "TEXT",
+        "next_state": "2a_ondc",
+        "store_to_db": true,
+        "intent": "location_start"
+    },
+    "2a_ondc": {
+        "message": "",
+        "reply": "TEXT",
+        "next_state": "3_ondc",
+        "handler": "get_start_address",
+        "handler_value": "",
+        "continue": true
+    },
+    "3_ondc": {
+        "message": "ONDC_TXT_3",
+        "reply": "TEXT",
+        "next_state": "3a_ondc",
+        "store_to_db": true,
+        "intent": "location_end"
+    },
+    "3a_ondc": {
+        "message": "",
+        "reply": "TEXT",
+        "next_state": "ridesearch_ondc",
+        "handler": "get_destination_address",
+        "handler_value": "",
+        "continue": true
+    },
+    "ridesearch_ondc": {
+        "message": "ONDC_TXT_SEARCH",
+        "reply": "BUTTON",
+        "buttons": "ONDC_TXT_SEARCH_BTNS",
+        "1_option_state": "4_ondc"
+    },
+    "4_ondc": {
+        "message": "ONDC_TXT_4",
+        "reply": "TEXT",
+        "next_state": "5_ondc",
+        "continue": true
+    },
+    "5_ondc": {
+        "message": "",
+        "reply": "LIST",
+        "next_state": "6_ondc",
+        "handler": "bap_search",
+        "handler_value": "",
+        "store_to_dict": true,
+        "intent": "selected_item_id"
+    },
+    "list_ondc": {
+        "message": "",
+        "reply": "LIST",
+        "next_state": "6_ondc",
+        "handler": "list_ride",
+        "handler_value": "",
+        "store_to_dict": true,
+        "intent": "selected_item_id"
+    },
+    "6a_ondc": {
+        "message": "",
+        "reply": "TEXT",
+        "next_state": "5a_ondc",
+        "handler": "bap_init",
+        "handler_value": "",
+        "store_to_dict": true,
+        "intent": "init_resp",
+        "continue": true
+    },
+    "5a_ondc": {
+        "message": "",
+        "reply": "LIST",
+        "next_state": "8_ondc",
+        "handler": "bap_pay",
+        "handler_value": "",
+        "store_to_dict": true,
+        "intent": "selected_payment"
+    },
+    "6_ondc": {
+        "message": "",
+        "reply": "BUTTON",
+        "buttons": "ONDC_TXT_5_BTNS",
+        "button_body": "image",
+        "next_state": "6a_ondc",
+        "handler": "bap_select",
+        "handler_value": "",
+        "2_option_state": "10_ondc",
+        "1_option_state": "6a_ondc"
+    },
+    "7_ondc": {
+        "message": "ONDC_TXT_6",
+        "reply": "TEXT",
+        "next_state": "8_ondc",
+        "continue": true
+    },
+    "8_ondc": {
+        "message": "",
+        "reply": "BUTTON",
+        "buttons": "ONDC_TXT_7_BTNS",
+        "1_option_state": "10a_ondc",
+        "2_option_state" : "9_ondc",
+        "switch_state"   : true,
+        "handler": "bap_confirm",
+        "handler_value": ""    
+    },
+    "cancel_ondc": {
+        "message": "ONDC_TXT_CANCEL",
+        "reply": "BUTTON",
+        "buttons": "ONDC_TXT_7_BTNS",
+        "1_option_state": "10_ondc",
+        "next_state": "9_ondc",
+        "continue": true
+    },
+    "9_ondc": {
+        "message": "ONDC_TXT_8",
+        "reply": "TEXT",
+        "handler": "bap_support",
+        "handler_value": ""
+    },
+    "10a_ondc": {
+        "message": "",
+        "reply": "LIST",
+        "next_state": "10_ondc",
+        "handler": "bap_cancel",
+        "handler_value": ""
+    },
+    "10_ondc": {
+        "message": "ONDC_TXT_9",
+        "reply": "TEXT",
+        "next_state": "END"
+    },
+    "11_ondc": {
+        "message": "ONDC_TXT_10",
+        "reply": "TEXT",
+        "next_state": "END",
+        "continue": true
+    },
+    "end_ondc": {
+        "message": "ONDC_TXT_END",
+        "reply": "TEXT",
+        "next_state": "END",
+        "continue": true
+    },
+    "endbutton_ondc": {
+        "message": "ONDC_TXT_END",
+        "reply": "TEXT",
+        "next_state": "1_ondc",
+        "continue": true
+    },
+    "endlistride_ondc": {
+        "message": "ONDC_TXT_END",
+        "reply": "TEXT",
+        "next_state": "list_ondc",
+        "continue": true
+    },
+    "endlistpay_ondc": {
+        "message": "ONDC_TXT_END",
+        "reply": "TEXT",
+        "next_state": "5a_ondc",
+        "continue": true
+    },
+    "endproceed_ondc": {
+        "message": "ONDC_TXT_END",
+        "reply": "TEXT",
+        "next_state": "6_ondc",
+        "continue": true
+    },
+    "endcancel_ondc": {
+        "message": "ONDC_TXT_END",
+        "reply": "TEXT",
+        "next_state": "8_ondc",
+        "continue": true
+    },
+    "endhelp_ondc": {
+        "message": "ONDC_TXT_END",
+        "reply": "TEXT",
+        "next_state": "cancel_ondc",
+        "continue": true
+    },
+    "endfail_ondc": {
+        "message": "ONDC_TXT_FAIL",
+        "reply": "TEXT",
+        "next_state": "9_ondc",
+        "continue": true
+    },
+    "start_ondc": {
+        "message": "ONDC_TXT_LOC_START",
+        "reply": "TEXT",
+        "next_state": "2a_ondc",
+        "store_to_db": true,
+        "intent": "location_start"
+    },
+    "endloc_ondc": {
+        "message": "ONDC_TXT_LOC_END",
+        "reply": "TEXT",
+        "next_state": "3a_ondc",
+        "store_to_db": true,
+        "intent": "location_end"
+    },
+    "12_ondc": {
+        "message": "HI_TXT_22",
+        "reply": "TEXT",
+        "next_state": "12a_ondc",
+        "store_to_db": true,
+        "intent": "location_start"
+    },
+    "12a_ondc": {
+        "message": "",
+        "reply": "TEXT",
+        "next_state": "13_ondc",
+        "handler": "get_start_address",
+        "handler_value": "",
+        "continue": true
+    },
+    "13_ondc": {
+        "message": "HI_TXT_3",
+        "reply": "TEXT",
+        "next_state": "13a_ondc",
+        "store_to_db": true,
+        "intent": "location_end"
+    },
+    "13a_ondc": {
+        "message": "",
+        "reply": "TEXT",
+        "next_state": "ridesearch_ondc",
+        "handler": "get_destination_address",
+        "handler_value":"",
+        "continue":true
+    },
+    "1ridesearch_ondc": {
+        "message": "HI_TXT_SEARCH",
+        "reply": "BUTTON",
+        "buttons": "ONDC_TXT_SEARCH_BTNS",        
+        "1_option_state" : "4_ondc"
+        
+        
+    },
+    "14_ondc": {
+        "message": "HI_TXT_4",
+        "reply": "TEXT",
+        "next_state": "15_ondc",
+        "continue": true
+    },
+    "15_ondc": {
+        "message": "",
+        "reply": "LIST",
+        "next_state": "16_ondc",
+        "handler": "bap_search",
+        "handler_value": "",
+        "store_to_dict": true,
+        "intent": "selected_item_id"
+    },
+    "1list_ondc": {
+        "message": "",
+        "reply": "LIST",
+        "next_state": "16_ondc",
+        "handler": "list_ride",
+        "handler_value": "",
+        "store_to_dict": true,
+        "intent": "selected_item_id"
+    },
+    "16a_ondc": {
+        "message": "",
+        "reply": "TEXT",
+        "next_state": "15a_ondc",
+        "handler": "bap_init",
+        "handler_value": "",
+        "store_to_dict": true,
+        "intent": "init_resp",
+        "continue": true
+    },
+    "15a_ondc": {
+        "message": "",
+        "reply": "LIST",
+        "next_state": "18_ondc",
+        "handler": "bap_pay",
+        "handler_value": "",
+        "store_to_dict": true,
+        "intent": "selected_payment"
+    },
+    "16_ondc": {
+        "message": "",
+        "reply": "BUTTON",
+        "buttons": "HI_TXT_5_BTNS",
+        "button_body": "image",
+        "next_state": "16a_ondc",
+        "handler": "bap_select",
+        "handler_value": "",
+        "2_option_state": "110_ondc",
+        "1_option_state": "16a_ondc"
+    },
+    "17_ondc": {
+        "message": "HI_TXT_6",
+        "reply": "TEXT",
+        "next_state": "18_ondc",
+        "continue": true
+    },
+    "18_ondc": {
+        "message": "",
+        "reply": "BUTTON",
+        "buttons": "HI_TXT_7_BTNS",
+        "1_option_state": "110_ondc",
+        "2_option_state" : "19_ondc",
+        "handler": "bap_confirm",
+        "handler_value": "",
+        "continue": true
+    },
+    "1cancel_ondc": {
+        "message": "HI_TXT_CANCEL",
+        "reply": "BUTTON",
+        "buttons": "HI_TXT_7_BTNS",
+        "1_option_state": "110_ondc",
+        "next_state": "19_ondc",
+        "continue": true
+    },
+    "19_ondc": {
+        "message": "HI_TXT_8",
+        "reply": "BUTTON",
+        "buttons": "HI_TXT_8_BTNS",
+        "1_option_state": "111_ondc"
+    },
+    "110_ondc": {
+        "message": "HI_TXT_9",
+        "reply": "TEXT",
+        "next_state": "END",
+        "continue": true
+    },
+    "110a_ondc": {
+        "message": "",
+        "reply": "LIST",
+        "next_state": "110_ondc",
+        "handler": "bap_cancel",
+        "handler_value": "",
+        "continue": true
+    },
+    "111_ondc": {
+        "message": "HI_TXT_10",
+        "reply": "TEXT",
+        "next_state": "END",
+        "continue": true
+    },
+    "1end_ondc": {
+        "message": "HI_TXT_END",
+        "reply": "TEXT",
+        "next_state": "END",
+        "continue": true
+    },
+    "1endbutton_ondc": {
+        "message": "HI_TXT_END",
+        "reply": "TEXT",
+        "next_state": "1_ondc",
+        "continue": true
+    },
+    "1endlistride_ondc": {
+        "message": "HI_TXT_END",
+        "reply": "TEXT",
+        "next_state": "1list_ondc",
+        "continue": true
+    },
+    "1endlistpay_ondc": {
+        "message": "HI_TXT_END",
+        "reply": "TEXT",
+        "next_state": "15a_ondc",
+        "continue": true
+    },
+    "1endproceed_ondc": {
+        "message": "HI_TXT_END",
+        "reply": "TEXT",
+        "next_state": "16_ondc",
+        "continue": true
+    },
+    "1endcancel_ondc": {
+        "message": "HI_TXT_END",
+        "reply": "TEXT",
+        "next_state": "18_ondc",
+        "continue": true
+    },
+    "1endhelp_ondc": {
+        "message": "HI_TXT_END",
+        "reply": "TEXT",
+        "next_state": "1cancel_ondc",
+        "continue": true
+    },
+    "1endfail_ondc": {
+        "message": "HI_TXT_FAIL",
+        "reply": "TEXT",
+        "next_state": "19_ondc",
+        "continue": true
+    },
+    "1start_ondc": {
+        "message": "HI_TXT_LOC_START",
+        "reply": "TEXT",
+        "next_state": "12a_ondc",
+        "store_to_db": true,
+        "intent": "location_start"
+    },
+    "1endloc_ondc": {
+        "message": "HI_TXT_LOC_END",
+        "reply": "TEXT",
+        "next_state": "13a_ondc",
+        "store_to_db": true,
+        "intent": "location_end"
+    }
+}
+
